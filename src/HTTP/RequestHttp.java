@@ -106,13 +106,13 @@ public class RequestHttp implements Runnable {
 	}
 	
 	public String toString() {
-		String req = this.modo + " " + this.recurso + " " + this.versaoHttp + "\n";
+		String req ="Modo: " + this.modo + " /" + " Recurso: " + this.recurso + "/" + " Versão: " +this.versaoHttp + "\n";
 				
 		Iterator<String> it = parametros.keySet().iterator();
 
 		while (it.hasNext()) {
 			String chave = it.next(); 
-			req += chave + " : " + parametros.get(chave) + "\n";
+			req += chave + " : " + parametros.get(chave);
 		}	
 		return req;
 		
